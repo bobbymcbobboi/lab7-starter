@@ -5,7 +5,6 @@ class RecipeCard extends HTMLElement {
 	// the element is written into the DOM directly as <recipe-card>
 	constructor() {
 		super(); // Inherit everything from HTMLElement
-		console.log('asdfsdf')
 		// EXPOSE - START (All expose numbers start with A)
 		// A1. TODO - Attach the shadow DOM to this Web Component (leave the mode open)
 		const shadowRoot = this.attachShadow({mode: 'open'})
@@ -140,7 +139,7 @@ class RecipeCard extends HTMLElement {
 			<p class="organization">${data.organization}</p>
 			<div class="rating">
 				<span>${data.rating}</span>
-				<img src="/assets/images/icons/5-star.svg" alt="5 stars">
+				<img src="./assets/images/icons/${data.rating}-star.svg" alt="5 stars">
 				<span>(${data.numRatings})</span>
 			</div>
 			<time>${data.lengthTime}</time>
